@@ -1,8 +1,59 @@
-
+span
+{
+    display:inline-block;
+    padding:25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+h2
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    background:silver;
+    padding:20px 20px;
+    margin-right: 20px;
+}
 
 #menu-icon
 {
     padding:20px;
+    
+}
+
+#first-container
+{
+    height:100px;
+    background:#ffffff;
+}
+
+ul li
+{
+    list-style-type: none;
+    padding:20px;
+    padding-top:30px;
+    padding-bottom:30px;
+    border-top:0.5px solid black;
+    margin-right: 20px;
+    
+}
+
+li a
+{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:#b77d3c;
+    font-weight: 500;
+    
+   
+    
+}
+
+.icon
+{
+    width:50px;
+    float:right;
+    padding:15px;
+   
 }
 
 
@@ -26,6 +77,26 @@
     margin-right: auto;
     height: 50px;
     padding-top: 30px;
+    
    
+}
+
+.menu-container
+{
+    width:450px;
+
+    background:silver;
+
+}
+.panel
+{
+    border:1px solid grey;
+    background:#f5f4f2;
+  
+}
+
+.right-spacing
+{
+    margin-left:30px;
 }
 
