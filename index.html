@@ -2,6 +2,24 @@
 
 <head>
 <link href="style.css" rel="stylesheet" type="text/css">
+
+<script>
+
+function OpenMenuCanvas(e)
+{
+    const menuContainer = document.querySelector(".menu-container");
+
+    menuContainer.classList.add("openMenu");
+}
+function closeMenu(e)
+{
+    const menuContainer = document.querySelector(".menu-container");
+
+    menuContainer.classList.remove("openMenu");
+}
+
+
+</script>
 </head>
 
 
@@ -15,12 +33,12 @@
   <div class="menu-container">
 
     <div id="first-container">
-    <input type="image" src="iconfinder_misc-_close__1276877.svg" class="icon">
+    <input type="image" src="iconfinder_misc-_close__1276877.svg" class="icon" id="close">
        </div>
          <div class="panel" id="guys">
 
             <span> GUYS</span>
-            <input type="image" src="down-arrow.svg" class="icon">
+            <input type="image" src="down-arrow.svg" class="icon arrow">
 
              <ul>
     
@@ -50,7 +68,7 @@
          <div class="panel" id="girls">
 
                 <span> GIRLS</span>
-                <input type="image" src="down-arrow.svg" class="icon">
+                <input type="image" src="down-arrow.svg" class="icon arrow">
     
                  <ul>
         
@@ -84,7 +102,7 @@
              <div class="panel" id="gilly-hicks">
 
                     <span> GILLY HICKS</span>
-                    <input type="image" src="down-arrow.svg" class="icon">
+                    <input type="image" src="down-arrow.svg" class="icon arrow">
         
                      <ul>
             
@@ -107,7 +125,7 @@
                  <div class="panel" id="jeans">
 
                         <span> JEANS</span>
-                        <input type="image" src="down-arrow.svg" class="icon">
+                        <input type="image" src="down-arrow.svg" class="icon arrow">
             
                         <h2 class="right-spacing">Guys Jeans</h2>
                         <ul>
@@ -136,7 +154,7 @@
                      <div class="panel" id="sale">
 
                         <span> SALE</span>
-                        <input type="image" src="down-arrow.svg" class="icon">
+                        <input type="image" src="down-arrow.svg" class="icon arrow">
             
                         <h2 class="right-spacing">Guys</h2>
                         <ul>
@@ -158,12 +176,29 @@
             
             
                      </div>
-    
-
-
-     
+      
   </div>
   
+  <script>
+  const menuIcon = document.querySelector("#menu-icon");
+  const closeIcon =  document.querySelector("#close");
+  const menu = document.querySelector(".menu-container");
+
+  menuIcon.addEventListener("click",OpenMenuCanvas);
+  closeIcon.addEventListener("click",closeMenu);
+
+  menu.addEventListener("click",e=>
+  {
+    if(e.target.closest("div").classList.contains("panel"))
+    {
+       e.target.classList.toggle("open-panel");
+    }
+  }
+  );
+
+
+  
+  </script>
 
 </body>
 
