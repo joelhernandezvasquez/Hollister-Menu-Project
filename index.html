@@ -3,23 +3,7 @@
 <head>
 <link href="style.css" rel="stylesheet" type="text/css">
 
-<script>
-
-function OpenMenuCanvas(e)
-{
-    const menuContainer = document.querySelector(".menu-container");
-
-    menuContainer.classList.add("openMenu");
-}
-function closeMenu(e)
-{
-    const menuContainer = document.querySelector(".menu-container");
-
-    menuContainer.classList.remove("openMenu");
-}
-
-
-</script>
+<script src="main.js"> </script>
 </head>
 
 
@@ -186,18 +170,7 @@ function closeMenu(e)
 
   menuIcon.addEventListener("click",OpenMenuCanvas);
   closeIcon.addEventListener("click",closeMenu);
-
-  menu.addEventListener("click",e=>
-  {
-    if(e.target.closest("div").classList.contains("panel"))
-    {
-       e.target.classList.toggle("open-panel");
-    }
-  }
-  );
-
-
-  
+  menu.addEventListener("click",openPanel);
   </script>
 
 </body>

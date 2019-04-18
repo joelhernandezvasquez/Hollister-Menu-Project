@@ -14,6 +14,7 @@ h2
     background:silver;
     padding:20px 20px;
     margin-right: 20px;
+
 }
 
 #menu-icon
@@ -83,12 +84,13 @@ li a
 {
     width:450px;
     border:1px solid grey;
-    background:#f5f4f2;
+    background:white;
     position:fixed;
     top:0;
     left:0;  
     transform:translateX(-450px); 
     transition: transform 0.5s;
+  
     
 
 }
@@ -99,11 +101,13 @@ li a
 }
 .arrow
 {
- transition: transform 0.5;
+ transform: rotate(0deg);
+ transition:transform 0.1s ease-out;
 }
-.open-panel.arrow
+
+.animate-arrow.arrow
 {
-    transform: rotateY(-180deg);
+    transform: rotate(180deg);
 }
 .panel
 {
@@ -111,11 +115,14 @@ li a
  overflow:hidden;
  transition:height 0.5s;
  
+ 
 }
 .open-panel.panel
 {
     height:400px;
     overflow-y: scroll;
+    background:#f5f4f2;
+    
     
 }
 
